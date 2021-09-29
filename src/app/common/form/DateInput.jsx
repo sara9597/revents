@@ -12,7 +12,6 @@ const DateInput = ({
 }) => {
   return (
     <Form.Field error={touched && !!error}>
-    {console.log(input.value)}
       <DatePicker
         {...rest}
         placeholder={placeholder}
