@@ -1,7 +1,6 @@
 import React from "react";
 import { Segment, Image, Item, Button, Header } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-
 const eventImageStyle = {
   filter: "brightness(30%)"
 };

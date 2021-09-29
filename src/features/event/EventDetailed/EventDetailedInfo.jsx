@@ -22,7 +22,11 @@ const EventDetailedInfo = ({ event }) => {
             <Icon name='calendar' size='large' color='teal' />
           </Grid.Column>
           <Grid.Column width={15}>
-            <span>{event.date}</span>
+            
+              <span>
+                {event.date}
+              </span>
+           
           </Grid.Column>
         </Grid>
       </Segment>
@@ -35,15 +39,21 @@ const EventDetailedInfo = ({ event }) => {
             <span>{event.venue}</span>
           </Grid.Column>
           <Grid.Column width={4}>
-            <Button onClick ={()=> showMapToggle(!isMapOpen)} color='teal' size='tiny' content={isMapOpen ? 'Hide Map' : 'Show Map'} />
+            <Button
+              onClick={() => showMapToggle(!isMapOpen)}
+              color='teal'
+              size='tiny'
+              content={isMapOpen ? "Hide Map" : "Show Map"}
+            />
           </Grid.Column>
         </Grid>
       </Segment>
-      {isMapOpen && 
-      <EventDetailedMap
-        lat={event.venueLatLng.lat}
-        lng={event.venueLatLng.lng}
-      />}
+      {isMapOpen && (
+        <EventDetailedMap
+          lat={event.venueLatLng.lat}
+          lng={event.venueLatLng.lng}
+        />
+      )}
     </Segment.Group>
   );
 };
