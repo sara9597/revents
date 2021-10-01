@@ -5,10 +5,12 @@ import thunk from "redux-thunk";
 import { reactReduxFirebase, getFirebase } from "react-redux-firebase";
 import { reduxFirestore, getFirestore } from "redux-firestore";
 import firebase from "../config/firebase";
+
 const rrfConfig = {
   userProfile: "users",
   attachAuthIsReady: true,
-  useFirestoreForProfile: true
+  useFirestoreForProfile: true,
+  updateProfileOnLogin:false
 };
 
 export const configureStore = () => {
